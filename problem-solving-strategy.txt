@@ -1,0 +1,16 @@
+-Dont solve problems randomly
+-Solve similar problems in a cluster.Eg all array related questions. So that you can identify the pattern of questions
+-Pick these lists to solve first
+    1-https://leetcode.com/explore/interview/card/top-interview-questions-easy
+    2-https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU
+    3-https://seanprashad.com/leetcode-patterns/
+-Use pen and paper to visualize the problems
+-Break down the problem into smaller chunks
+-Dont spend too much time on a single problem
+-The first 100 problems will be difficult after that the rest 
+will before easier with more practise
+-Simulate as if you are giving an interview for 
+every problem.
+-When you get stuck.Note down why you got stuck and study the topics 
+necessary so that you dont get stuck on similar problems in the future
+
