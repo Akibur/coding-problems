@@ -13,4 +13,8 @@ will before easier with more practise
 every problem.
 -When you get stuck.Note down why you got stuck and study the topics 
 necessary so that you dont get stuck on similar problems in the future
-
+-Watch others solve the same problem to familiarize with different tecniques
+NOTES
+-The key to avoiding nested for loops is using dictionaries
+-The for...of statement creates a loop iterating over iterable objects, including: built-in String, 
+Array, array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables.
