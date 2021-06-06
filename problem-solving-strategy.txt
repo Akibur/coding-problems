@@ -14,6 +14,10 @@ every problem.
 -When you get stuck.Note down why you got stuck and study the topics 
 necessary so that you dont get stuck on similar problems in the future
 -Watch others solve the same problem to familiarize with different tecniques
+
+How to solve a problem
+https://www.youtube.com/watch?v=q7z4_0Keo5E
+
 NOTES
 -The key to avoiding nested for loops is using dictionaries
 -The for...of statement creates a loop iterating over iterable objects, including: built-in String, 
