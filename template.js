@@ -15,5 +15,4 @@ var findNumbers = function (nums) {
 
 };
 
-
-console.log(findNumbers(nums));
+//console.log(findNumbers(nums));
