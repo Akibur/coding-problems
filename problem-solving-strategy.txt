@@ -23,3 +23,10 @@ NOTES
 -The key to avoiding nested for loops is using dictionaries
 -The for...of statement creates a loop iterating over iterable objects, including: built-in String, 
 Array, array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables.
+
+
+REsources (after reading grokkings algo)
+https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
+https://www.quora.com/Are-there-any-good-resources-or-tutorials-for-dynamic-programming-DP-besides-the-TopCoder-tutorial
+https://www.topcoder.com/community/competitive-programming/tutorials/dynamic-programming-from-novice-to-advanced/
+https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed
