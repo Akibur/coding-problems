@@ -4,6 +4,7 @@
     1-https://leetcode.com/explore/interview/card/top-interview-questions-easy
     2-https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU
     3-https://seanprashad.com/leetcode-patterns/
+    4-https://leetcode.com/list/xi4ci4ig/
 -Use pen and paper to visualize the problems
 -Break down the problem into smaller chunks
 -Dont spend too much time on a single problem
