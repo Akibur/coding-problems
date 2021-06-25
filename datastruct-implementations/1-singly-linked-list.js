@@ -127,10 +127,13 @@ class SinglyLinkedList {
         if (pos == 0) {
             node.next = this.head;
             this.head = node;
+            this.length++;
 
         } else if (pos == this.length) {
             this.tail.next = node;
             this.tail = node;
+            this.length++;
+
 
 
         } else {
@@ -141,6 +144,8 @@ class SinglyLinkedList {
             }
             node.next = temp.next;
             temp.next = node;
+            this.length++;
+
         }
 
 
@@ -158,6 +163,8 @@ class SinglyLinkedList {
             temp = this.head;
             this.head = this.head.next;
             temp.next = null;
+            this.length--;
+
 
         } else if (pos == this.length - 1) {
             let counter = 0;
@@ -167,6 +174,8 @@ class SinglyLinkedList {
             }
             this.tail = temp;
             this.tail.next = null;
+            this.length--;
+
 
 
         } else {
@@ -178,6 +187,7 @@ class SinglyLinkedList {
             let temp2 = temp.next;
             temp.next = temp2.next;
             temp2.next = null;
+            this.length--;
 
 
         }
@@ -185,6 +195,11 @@ class SinglyLinkedList {
     }
 
     reverse() {
+        if (this.length === 0) {
+            this.head = null;
+            this.tail = null;
+            return undefined;
+        }
         let current = null;
         let prev = null;
         //swap head and tail
