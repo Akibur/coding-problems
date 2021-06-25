@@ -2,10 +2,11 @@ class Node {
     constructor(val) {
         this.val = val;
         this.next = null;
+        this.prev = null;
     }
 }
 
-class SinglyLinkedList {
+class DoublyLinkedList {
     constructor() {
 
         this.head = null;
@@ -22,8 +23,8 @@ class SinglyLinkedList {
 
         } else {
             this.tail.next = node;
+            node.prev = this.tail;
             this.tail = node;
-            this.tail.next = null;
             this.length++;
         }
 
@@ -35,22 +36,36 @@ class SinglyLinkedList {
             this.tail = null;
             return undefined;
         }
-        let temp = this.head;
-        let tempVal = 0;
-        let counter = 1;
-        while (counter < this.length - 1) {
-            temp = temp.next;
-            counter++;
+
+        if (this.length == 1) {
+            let val = this.head.val;
+            this.head = null;
+            this.tail = null;
+            return val;
         }
-        tempVal = this.tail.val;
+
+        let temp = this.tail;
+        let tempVal = this.tail.val;
+
+        temp = this.tail.prev;
+        temp.next = null;
+        this.tail.prev = null;
         this.tail = temp;
-        this.tail.next = null;
+
         this.length--;
         return tempVal;
     }
 
     shift() {
         if (!this.head) return undefined;
+        if (this.length == 1) {
+            let val = this.head.val;
+            this.head = null;
+            this.tail = null;
+            this.length--;
+            return val;
+        }
+
         let temp = this.head.next;
         let val = this.head.val;
 
@@ -70,6 +85,7 @@ class SinglyLinkedList {
 
         } else {
             node.next = this.head;
+            this.head.prev = node;
             this.head = node;
             this.length++;
         }
@@ -95,6 +111,7 @@ class SinglyLinkedList {
     }
 
     get(pos) {
+
         if (pos < 0 || pos > this.length) return undefined;
         if (this.length === 0) {
             this.head = null;
@@ -126,11 +143,14 @@ class SinglyLinkedList {
 
         if (pos == 0) {
             node.next = this.head;
+            this.head.prev = node;
             this.head = node;
+
             this.length++;
 
         } else if (pos == this.length) {
             this.tail.next = node;
+            node.prev = this.tail;
             this.tail = node;
             this.length++;
 
@@ -143,9 +163,10 @@ class SinglyLinkedList {
                 counter++;
             }
             node.next = temp.next;
+            temp.next.prev = node;
+            node.prev = temp;
             temp.next = node;
             this.length++;
-
         }
 
 
@@ -194,42 +215,42 @@ class SinglyLinkedList {
 
     }
 
-    reverse() {
-        if (this.length === 0) {
-            this.head = null;
-            this.tail = null;
-            return undefined;
-        }
-        let current = null;
-        let prev = null;
-        //swap head and tail
-        let next = this.head;
-        this.head = this.tail;
-        this.tail = next;
+    // reverse() {
+    //     if (this.length === 0) {
+    //         this.head = null;
+    //         this.tail = null;
+    //         return undefined;
+    //     }
+    //     let current = null;
+    //     let prev = null;
+    //     //swap head and tail
+    //     let next = this.head;
+    //     this.head = this.tail;
+    //     this.tail = next;
 
-        prev = this.tail;
-        current = this.tail.next;
+    //     prev = this.tail;
+    //     current = this.tail.next;
 
-        while (1) {
-            next = current.next;
-            current.next = prev;
-            prev = current;
-            current = next;
-            if (current.next == null) {
-                current.next = prev;
-                this.tail.next = null;
-                return;
+    //     while (1) {
+    //         next = current.next;
+    //         current.next = prev;
+    //         prev = current;
+    //         current = next;
+    //         if (current.next == null) {
+    //             current.next = prev;
+    //             this.tail.next = null;
+    //             return;
 
-            }
-        }
-
-
+    //         }
+    //     }
 
 
-    }
+
+
+    // }
 
     printAll() {
-        if (!this.head) return undefined;
+        if (this.length == 0) return undefined;
 
         let pointer = this.head;
 
@@ -242,13 +263,13 @@ class SinglyLinkedList {
     }
 }
 
-let LS = new SinglyLinkedList();
+let LS = new DoublyLinkedList();
 LS.push(1);
 LS.push(2);
 LS.push(3);
-LS.push(4);
 
-console.log(LS.reverse());
+
+
 
 
 LS.printAll();
