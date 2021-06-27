@@ -41,6 +41,24 @@ class BST {
             }
         }
     }
+
+    find(val) {
+        if (!this.root) return false;
+        let current = this.root;
+        while (1) {
+            if (current.val === val) return true;
+
+            if (current.val > val) {
+                current = current.left;
+            } else {
+                current = current.right;
+            }
+            if (current == null) return false;
+        }
+
+
+
+    }
 }
 
 var tree = new BST();
@@ -51,3 +69,6 @@ tree.insert(2);
 tree.insert(7);
 tree.insert(11);
 tree.insert(16);
+console.log(tree.find(10));
+console.log(tree.find(500));
+console.log(tree.find(16));
