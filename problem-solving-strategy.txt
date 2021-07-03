@@ -25,7 +25,7 @@ NOTES
 Array, array-like objects (e.g., arguments or NodeList), TypedArray, Map, Set, and user-defined iterables.
 
 
-REsources (after reading grokkings algo)
+REsources
 https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
 https://www.quora.com/Are-there-any-good-resources-or-tutorials-for-dynamic-programming-DP-besides-the-TopCoder-tutorial
 https://www.topcoder.com/community/competitive-programming/tutorials/dynamic-programming-from-novice-to-advanced/
