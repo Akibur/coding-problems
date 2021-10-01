@@ -1,17 +1,16 @@
 var maxDepth = function (root) {
-    if (!root) return 0;
-    let queue = [root];
+    if (!root) {
+        return 0;
+    }
+    const q = [root];
     let depth = 0;
-    let curr = root;
-    while (queue.length) {
-        var curLevelLen = queue.length;
-        for (var i = 0; i < curLevelLen; i++) {
-            curr = queue.shift();
-            for (child of curr.children) {
-                queue.push(curr);
-            }
+    while (q.length) {
+        const size = q.length;
+        ++depth;
+        for (let i = 0; i < size; ++i) {
+            const node = q.shift();
+            node.children.forEach(child => q.push(child));
         }
-        depth++;
     }
     return depth;
 };
